@@ -1,5 +1,11 @@
 package tesla.service.impl;
 
-public class DemoServiceImplTest {
+import org.junit.Test;
 
+public class DemoServiceImplTest {
+	
+	@Test
+	public void testDemo(){
+		System.out.println("Probando Test");
+	}
 }
