@@ -1,5 +1,11 @@
 package tesla.service;
 
-public class DemoService {
+import java.util.List;
 
+import tesla.model.DemoModel;
+
+public interface DemoService {
+	
+	public List<DemoModel> listadoModelosDemo(); 
+	
 }
