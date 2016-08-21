@@ -6,45 +6,15 @@
 <head>
 <title>CredyUnion</title>
 
-<spring:url value="/resources/core/css/hello.css" var="coreCss" />
-<spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
-
-<link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/css/ext-all.css" rel="stylesheet" />
 </head>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">CredyUnion</a>
-		</div>
-	</div>
-</nav>
+<body></body>
 
-<div class="jumbotron">
-	<div class="container">
-		<h1>${title}</h1>
-		<p>
-			<c:if test="${not empty msg}">
-				Hello ${msg}
-			</c:if>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all.js"></script>
+<spring:url value="/resources/app.js" var="appJs" />
+<script src="${appJs}"></script>
 
-			<c:if test="${empty msg}">
-				Bienvenido a la Portada Principal ${msg}
-			</c:if>
-		</p>
-		<p>
-			<a class="btn btn-primary btn-lg" role="button" href="<c:url value="/admin" />" onclick="hola()">Inicio de Sesion</a>
-		</p>
-	</div>
-</div>
-
-<spring:url value="/resources/core/js/hello.js" var="coreJs" />
-<spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapJs" />
-
-<script src="${coreJs}"></script>
-<script src="${bootstrapJs}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-</body>
 </html>

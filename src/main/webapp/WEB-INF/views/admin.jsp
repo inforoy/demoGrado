@@ -7,13 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Hola Administrador</title>
 
-<spring:url value="/resources/core/css/hello.css" var="coreCss" />
-<spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
-<spring:url value="/resources/core/ext-4.2.1/resources/css/ext-all.css" var="extAllCss" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/css/ext-all.css" rel="stylesheet" />
 
+<spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
 <link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
-<link href="${extAllCss}" rel="stylesheet" />
 
 <script type="text/javascript">
 Ext.namespace('Banquito');
@@ -97,14 +94,12 @@ Ext.create('Ext.form.Panel', {
 	</div>
 </div>
 
-<spring:url value="/resources/core/js/hello.js" var="coreJs" />
-<spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapJs" />
-<spring:url value="/resources/core/ext-4.2.1/ext-all.js" var="extAllJs" />
 
-<script src="${coreJs}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all.js"></script>
+<script src="/resources/core/js/jquery.min.js"></script>
+
+<spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapJs" />
 <script src="${bootstrapJs}"></script>
-<script src="${extAllJs}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 </body>
 </html>
