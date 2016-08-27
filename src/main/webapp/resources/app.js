@@ -4,7 +4,7 @@ Ext.application({
     appFolder: 'resources/app',
     
     controllers: [
-                  'UserController'
+                  'Users'
               ],
  
     launch: function() {

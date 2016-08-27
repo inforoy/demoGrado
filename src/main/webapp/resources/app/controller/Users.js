@@ -1,4 +1,4 @@
-Ext.define('Banquito.controller.UserController', {
+Ext.define('Banquito.controller.Users', {
 	extend: 'Ext.app.Controller',
 	views: [
 	        'user.List',
