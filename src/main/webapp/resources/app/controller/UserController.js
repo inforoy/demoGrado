@@ -1,7 +1,8 @@
-Ext.define('Banquito.controller.Users', {
+Ext.define('Banquito.controller.UserController', {
 	extend: 'Ext.app.Controller',
 	views: [
-	        'user.List'
+	        'user.List',
+	        'user.Edit'
 	    ],
     init: function() {
         this.control({
@@ -13,6 +14,8 @@ Ext.define('Banquito.controller.Users', {
  
     editUser: function(grid, record) {
         console.log('Double clicked on ' + record.get('name'));
+        var view = Ext.widget('useredit');
+        view.down('form').loadRecord(record);
     }
     
 });
