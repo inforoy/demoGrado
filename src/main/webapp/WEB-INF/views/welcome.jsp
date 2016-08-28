@@ -9,7 +9,7 @@
 <!-- Latest compiled and minified CSS -->
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/css/ext-all.css" rel="stylesheet" /> -->
 
-<spring:url value="/resources/core/css/ext-all.css" var="extAllCss" />
+<spring:url value="/static/core/css/ext-all.css" var="extAllCss" />
 <link href="${extAllCss}" rel="stylesheet" />
 
 </head>
@@ -18,10 +18,10 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all.js"></script> -->
-<spring:url value="/resources/core/js/ext-all.js" var="extAllJs" />
+<spring:url value="/static/core/js/ext-all.js" var="extAllJs" />
 <script src="${extAllJs}"></script>
 
-<spring:url value="/resources/app.js" var="appJs" />
+<spring:url value="/static/app.js" var="appJs" />
 <script src="${appJs}"></script>
 
 

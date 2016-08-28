@@ -2,7 +2,7 @@ Ext.namespace('Banquito');
 Ext.Loader.setConfig({enabled:true});
 Ext.application({
     name: 'Banquito',
-    appFolder: 'resources/app',
+    appFolder: 'static/app',
     
     controllers: [
                   'Users'
