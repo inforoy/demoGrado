@@ -1,18 +1,10 @@
 Ext.define('Banquito.view.user.List' ,{
     extend: 'Ext.grid.Panel',
     alias : 'widget.userlist',
- 
+    store: 'Users',
     title : 'All Users',
  
     initComponent: function() {
-        this.store = {
-            fields: ['name', 'email' ],
-            data  : [
-                {name: 'Ed',    email: 'ed@sencha.com' },
-                {name: 'Tommy', email: 'tommy@sencha.com' },
-                {name: 'Roy',   email: 'roy@sencha.com' }
-            ]
-        };
  
         this.columns = [
             {header: 'Name',  dataIndex: 'name',  flex: 1},

@@ -4,6 +4,12 @@ Ext.define('Banquito.controller.Users', {
 	        'user.List',
 	        'user.Edit'
 	    ],
+	    stores: [
+	             'Users'
+	         ],
+	    models: [
+	             'User'
+	         ],
     init: function() {
         this.control({
             'userlist': {
