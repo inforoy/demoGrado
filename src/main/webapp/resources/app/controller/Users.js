@@ -12,8 +12,11 @@ Ext.define('Banquito.controller.Users', {
 	         ],
     init: function() {
         this.control({
-            'userlist': {
-            	itemdblclick: this.editUser
+        	'viewport > userlist': {
+                itemdblclick: this.editUser
+            },
+            'useredit button[action=save]': {
+            	click: this.updateUser
             }
         });
     },
@@ -22,6 +25,17 @@ Ext.define('Banquito.controller.Users', {
         console.log('Double clicked on ' + record.get('name'));
         var view = Ext.widget('useredit');
         view.down('form').loadRecord(record);
+    },
+    
+    updateUser: function(button) {
+        console.log('clicked the Save button');
+        var win    = button.up('window'),
+        form   = win.down('form'),
+        record = form.getRecord(),
+        values = form.getValues();
+ 
+        record.set(values);
+        win.close();
     }
     
 });
