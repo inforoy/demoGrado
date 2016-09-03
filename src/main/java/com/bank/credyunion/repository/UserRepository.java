@@ -2,9 +2,11 @@ package com.bank.credyunion.repository;
 
 import java.util.List;
 
-import com.bank.credyunion.model.Usuario;
+import com.bank.credyunion.model.UsuarioModel;
 
 public interface UserRepository {
+	
+	public boolean registrarUsuario(UsuarioModel usuario);
 	/*
 	public List<Usuario> listUsers();
     

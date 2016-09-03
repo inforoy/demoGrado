@@ -2,8 +2,6 @@ package com.bank.credyunion.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import com.bank.credyunion.controller.WelcomeController;
-
 public class SpringMvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override

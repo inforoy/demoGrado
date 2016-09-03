@@ -1,20 +1,19 @@
 package com.bank.credyunion.repository.impl;
 
-import java.util.List;
-
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.bank.credyunion.model.Usuario;
+import com.bank.credyunion.model.UsuarioModel;
 import com.bank.credyunion.repository.UserRepository;
 
 @Repository("userRepository")
 public class UserRepositoryImpl implements UserRepository {
+
+	public boolean registrarUsuario(UsuarioModel usuario) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
 /*
 	@Autowired
     private SessionFactory sessionFactory;

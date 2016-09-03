@@ -1,5 +1,12 @@
 package com.bank.credyunion.service;
 
-public interface UserService {
+import com.bank.credyunion.bean.UsuarioBean;
 
+public interface UserService {
+	/**
+	 * Metodo que registra en usuario
+	 * @param usuario
+	 * @return
+	 */
+	boolean registrarUsuario(UsuarioBean usuarioBean);
 }
