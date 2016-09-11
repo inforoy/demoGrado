@@ -7,9 +7,12 @@ public class SpringMvcInitializer extends AbstractAnnotationConfigDispatcherServ
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		return new Class[] { 
+				PostgresqlDataSource.class,
+				JdbcConfiguration.class,
 				WelcomeConfiguration.class,
 				AppRepositoryConfiguration.class,
 				AppServiceConfiguration.class
+				//,AppConfigMapper.class
 		};
 	}
  

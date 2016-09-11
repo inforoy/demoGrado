@@ -2,22 +2,21 @@ package com.bank.credyunion.model;
 
 import java.io.Serializable;
 
-public class UsuarioModel implements Serializable{
+public class T020_Usuario implements Serializable{
 	
 	private static final long serialVersionUID = -2170594781472174077L;
-	
-	private int idUsuario;
+	private String idUsuario;
 	private String nombreUsuario;
-	private String contraseniaUsuario;
+	private String contrasenia;
 	private String nombres;
 	private String apellidoPaterno;
 	private String apellidoMaterno;
-	private boolean indicadorEliminacion;
+	private String indicadorEliminacion;
 	
-	public int getIdUsuario() {
+	public String getIdUsuario() {
 		return idUsuario;
 	}
-	public void setIdUsuario(int idUsuario) {
+	public void setIdUsuario(String idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 	public String getNombreUsuario() {
@@ -26,11 +25,11 @@ public class UsuarioModel implements Serializable{
 	public void setNombreUsuario(String nombreUsuario) {
 		this.nombreUsuario = nombreUsuario;
 	}
-	public String getContraseniaUsuario() {
-		return contraseniaUsuario;
+	public String getContrasenia() {
+		return contrasenia;
 	}
-	public void setContraseniaUsuario(String contraseniaUsuario) {
-		this.contraseniaUsuario = contraseniaUsuario;
+	public void setContrasenia(String contrasenia) {
+		this.contrasenia = contrasenia;
 	}
 	public String getNombres() {
 		return nombres;
@@ -50,10 +49,10 @@ public class UsuarioModel implements Serializable{
 	public void setApellidoMaterno(String apellidoMaterno) {
 		this.apellidoMaterno = apellidoMaterno;
 	}
-	public boolean isIndicadorEliminacion() {
+	public String getIndicadorEliminacion() {
 		return indicadorEliminacion;
 	}
-	public void setIndicadorEliminacion(boolean indicadorEliminacion) {
+	public void setIndicadorEliminacion(String indicadorEliminacion) {
 		this.indicadorEliminacion = indicadorEliminacion;
 	}
 	

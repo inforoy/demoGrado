@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bank.credyunion.bean.UsuarioBean;
 import com.bank.credyunion.model.GeneralView;
-import com.bank.credyunion.model.User;
 import com.bank.credyunion.service.UserService;
 import com.google.gson.Gson;
 
@@ -29,23 +28,29 @@ public class UserController {
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
 		
-		User user = new User();
-		user.setName("roy");
-		user.setEmail("roy@gmail.com");
-		
 		Gson gson = new Gson();
 		GeneralView generalView = new GeneralView();
 		generalView.setMensaje("success");
 		generalView.setSuccess(true);
 		generalView.setTotalCount(1L);
-		generalView.setData(user);
+		generalView.setData(null);
 		String data = gson.toJson(generalView);
 		out.write(data);
 		System.out.println("termino");
 		
-		UsuarioBean usuarioBean = gson.fromJson(jsonData, UsuarioBean.class);
-		
-		userService.registrarUsuario(usuarioBean);
+//		UsuarioBean usuarioBean = gson.fromJson(jsonData, UsuarioBean.class);
+		UsuarioBean usuarioBean = new UsuarioBean();
+		usuarioBean.setIdUsuario("1");
+		usuarioBean.setNombreUsuario("roy");
+		usuarioBean.setNombres("Roy Walter");
+		usuarioBean.setApellidoPaterno("Calle");
+		usuarioBean.setApellidoMaterno("Sulca");
+		usuarioBean.setContrasenia("123");
+		usuarioBean.setIndicadorEliminacion("0");
+		userService.findUserById(usuarioBean);
+		userService.registerUser(usuarioBean);
+		userService.deleteUser(usuarioBean);
+		userService.findAllUsers();
 		
 		return "home";
 	}

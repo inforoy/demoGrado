@@ -2,11 +2,15 @@ package com.bank.credyunion.repository;
 
 import java.util.List;
 
-import com.bank.credyunion.model.UsuarioModel;
+import com.bank.credyunion.model.T020_Usuario;
 
 public interface UserRepository {
 	
-	public boolean registrarUsuario(UsuarioModel usuario);
+	boolean registerUser(T020_Usuario usuarioModel);
+	boolean updateUser(T020_Usuario usuarioModel);
+	boolean deleteUser(T020_Usuario usuarioModel);
+	T020_Usuario findUserById(T020_Usuario usuarioModel);
+	List<T020_Usuario> findAllUsers();
 	/*
 	public List<Usuario> listUsers();
     
