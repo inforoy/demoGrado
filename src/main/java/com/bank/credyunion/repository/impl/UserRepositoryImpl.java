@@ -85,7 +85,7 @@ public class UserRepositoryImpl implements UserRepository {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public int getNext(){
+	public int getNextUser(){
 		String sqlCount = SqlUtilsUser.getSqlCount();
 		int count = jdbcTemplate.queryForInt(sqlCount);
 		count = count + SQL_PARAMS_UNO;

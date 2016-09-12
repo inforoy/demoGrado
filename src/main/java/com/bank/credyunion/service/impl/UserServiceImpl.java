@@ -22,7 +22,8 @@ public class UserServiceImpl implements UserService {
 	 * @see com.bank.credyunion.service.UserService#registrarUsuario(com.bank.credyunion.model.Usuario)
 	 */
 	public boolean registerUser(UsuarioBean usuarioBean) {
-		int count = userRepository.getNext();
+		// validar que el usuario ya existe
+		int count = userRepository.getNextUser();
 		usuarioBean.setIdUsuario(count);
 		usuarioBean.setIndicadorEliminacion("0");
 		T020_Usuario usuarioModel = UsuarioConverter.parseConverter_FromUsuarioBeanToT020Usuario(usuarioBean);

@@ -11,6 +11,6 @@ public interface UserRepository {
 	boolean deleteUser(T020_Usuario usuarioModel);
 	T020_Usuario findUserById(T020_Usuario usuarioModel);
 	List<T020_Usuario> findAllUsers();
-	int getNext();
+	int getNextUser();
 	
 }
