@@ -12,7 +12,7 @@ public class UsuarioConverterTest {
 	@Test
 	public void usuarioConverterTest_1(){
 		UsuarioBean usuarioBean = new UsuarioBean();
-		usuarioBean.setIdUsuario("1000");
+		usuarioBean.setIdUsuario(10);
 		usuarioBean.setNombreUsuario("roy");
 		usuarioBean.setContrasenia("123");
 		usuarioBean.setNombres("Roy W");
@@ -20,9 +20,9 @@ public class UsuarioConverterTest {
 		usuarioBean.setApellidoMaterno("Sulca");
 		usuarioBean.setIndicadorEliminacion("0");
 		
-		T020_Usuario usuarioModel = UsuarioConverter.parseToUsuarioModel(usuarioBean);
+		T020_Usuario usuarioModel = UsuarioConverter.parseConverter_FromUsuarioBeanToT020Usuario(usuarioBean);
 		
-		Assert.assertEquals("1000", usuarioModel.getIdUsuario());
+		Assert.assertEquals(10, usuarioModel.getIdUsuario());
 		Assert.assertEquals("roy", usuarioModel.getNombreUsuario());
 		Assert.assertEquals("123", usuarioModel.getContrasenia());
 		Assert.assertEquals("Roy W", usuarioModel.getNombres());

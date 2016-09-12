@@ -11,15 +11,6 @@ public interface UserRepository {
 	boolean deleteUser(T020_Usuario usuarioModel);
 	T020_Usuario findUserById(T020_Usuario usuarioModel);
 	List<T020_Usuario> findAllUsers();
-	/*
-	public List<Usuario> listUsers();
-    
-    public Usuario getUserById(int id);
-     
-    public boolean insertUser(Usuario user);
-    
-    public boolean updateUser(Usuario user);
-     
-    public boolean deleteUser(Usuario usuario);
-	 */
+	int getNext();
+	
 }
