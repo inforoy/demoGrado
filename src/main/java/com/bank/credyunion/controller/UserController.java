@@ -49,7 +49,7 @@ public class UserController {
 		usuarioBean.setContrasenia("123");
 		
 		try {
-			boolean isTrue = userService.registerUser(usuarioBean);
+			/*boolean isTrue = userService.registerUser(usuarioBean);
 			
 			usuarioBean.setIdUsuario(3);
 			usuarioBean.setNombreUsuario("demo");
@@ -63,6 +63,7 @@ public class UserController {
 			List<UsuarioBean> list = userService.findAllUsers();
 			
 			boolean isTrue3 = userService.deleteUser(usuarioBean2);
+			*/
 		} catch (Exception e) {
 			System.out.println("Error"+e);
 		}
