@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 	public boolean registerUser(UsuarioBean usuarioBean) {
 		// validar que el usuario ya existe
 		int count = userRepository.getNextUser();
-		usuarioBean.setIdUsuario(count);
+		usuarioBean.setIdUsuario(String.valueOf(count));
 		usuarioBean.setIndicadorEliminacion("0");
 		T020_Usuario usuarioModel = UsuarioConverter.parseConverter_FromUsuarioBeanToT020Usuario(usuarioBean);
 		boolean result = userRepository.registerUser(usuarioModel);

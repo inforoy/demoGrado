@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class T020_Usuario implements Serializable{
 	
 	private static final long serialVersionUID = -2170594781472174077L;
-	private int idUsuario;
+	private String idUsuario;
 	private String nombreUsuario;
 	private String contrasenia;
 	private String nombres;
@@ -13,10 +13,10 @@ public class T020_Usuario implements Serializable{
 	private String apellidoMaterno;
 	private String indicadorEliminacion;
 	
-	public int getIdUsuario() {
+	public String getIdUsuario() {
 		return idUsuario;
 	}
-	public void setIdUsuario(int idUsuario) {
+	public void setIdUsuario(String idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 	public String getNombreUsuario() {

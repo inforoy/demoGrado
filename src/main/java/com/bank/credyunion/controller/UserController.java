@@ -41,7 +41,7 @@ public class UserController {
 		
 //		UsuarioBean usuarioBean = gson.fromJson(jsonData, UsuarioBean.class);
 		UsuarioBean usuarioBean = new UsuarioBean();
-		usuarioBean.setIdUsuario(0);
+		usuarioBean.setIdUsuario("0");
 		usuarioBean.setNombreUsuario("demo");
 		usuarioBean.setNombres("Demo New");
 		usuarioBean.setApellidoPaterno("CalleX");

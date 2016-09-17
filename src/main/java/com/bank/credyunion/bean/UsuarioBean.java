@@ -2,7 +2,7 @@ package com.bank.credyunion.bean;
 
 public class UsuarioBean {
 	
-	private int idUsuario;
+	private String idUsuario;
 	private String nombreUsuario;
 	private String contrasenia;
 	private String nombres;
@@ -10,10 +10,10 @@ public class UsuarioBean {
 	private String apellidoMaterno;
 	private String indicadorEliminacion;
 	
-	public int getIdUsuario() {
+	public String getIdUsuario() {
 		return idUsuario;
 	}
-	public void setIdUsuario(int idUsuario) {
+	public void setIdUsuario(String idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 	public String getNombreUsuario() {

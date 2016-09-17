@@ -15,7 +15,7 @@ public class UserMapper implements Serializable {
 		List<T020_Usuario> listUsers = new LinkedList<T020_Usuario>();
 		for (Map<String, Object> user : userMaps ) {
 			T020_Usuario usuario = new T020_Usuario();
-		    usuario.setIdUsuario( (int) user.get("id_usuario") );
+		    usuario.setIdUsuario( (String) user.get("id_usuario") );
 		    usuario.setNombreUsuario( (String) user.get("usuario") );
 		    usuario.setContrasenia( (String) user.get("contrasenia") );
 		    usuario.setNombres( (String) user.get("nombres") );

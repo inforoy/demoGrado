@@ -1,11 +1,9 @@
-package com.bank.credyunion.model;
+package com.bank.credyunion.bean;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class T006_Empresa implements Serializable{
+public class EmpresaBean {
 	
-	private static final long serialVersionUID = 4185953401984244275L;
 	private String idEmpresa;
 	private String descripcion;
 	private Date fechaDeCreacion;
@@ -35,6 +33,5 @@ public class T006_Empresa implements Serializable{
 	public void setIndicadorEliminacion(String indicadorEliminacion) {
 		this.indicadorEliminacion = indicadorEliminacion;
 	}
-	
 	
 }

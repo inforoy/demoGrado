@@ -13,4 +13,41 @@ public class T016_ProductoCredito implements Serializable {
 	private BigDecimal tasa;
 	private String indicadorEliminacion;
 	
+	public String getIdProductoCredito() {
+		return idProductoCredito;
+	}
+	public void setIdProductoCredito(String idProductoCredito) {
+		this.idProductoCredito = idProductoCredito;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	public BigDecimal getMontoMinimo() {
+		return montoMinimo;
+	}
+	public void setMontoMinimo(BigDecimal montoMinimo) {
+		this.montoMinimo = montoMinimo;
+	}
+	public BigDecimal getMontoMaximo() {
+		return montoMaximo;
+	}
+	public void setMontoMaximo(BigDecimal montoMaximo) {
+		this.montoMaximo = montoMaximo;
+	}
+	public BigDecimal getTasa() {
+		return tasa;
+	}
+	public void setTasa(BigDecimal tasa) {
+		this.tasa = tasa;
+	}
+	public String getIndicadorEliminacion() {
+		return indicadorEliminacion;
+	}
+	public void setIndicadorEliminacion(String indicadorEliminacion) {
+		this.indicadorEliminacion = indicadorEliminacion;
+	}
+	
 }
