@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.bank.credyunion.bean.EmpresaBean;
 import com.bank.credyunion.bean.UsuarioBean;
 import com.bank.credyunion.domain.T006_Empresa;
-import com.bank.credyunion.repository.BusinessRepository;
+import com.bank.credyunion.repository.EmpresaRepository;
 import com.bank.credyunion.service.EmpresaService;
 import com.bank.credyunion.util.converter.BusinessConverter;
 
@@ -17,7 +17,7 @@ import com.bank.credyunion.util.converter.BusinessConverter;
 public class EmpresaServiceImpl implements EmpresaService {
 
 	@Autowired
-    private BusinessRepository businessRepository;
+    private EmpresaRepository businessRepository;
 
 	@Override
 	public boolean registerBusiness(EmpresaBean empresa) {

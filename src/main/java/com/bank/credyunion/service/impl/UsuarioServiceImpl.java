@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.bank.credyunion.bean.UsuarioBean;
 import com.bank.credyunion.domain.T020_Usuario;
-import com.bank.credyunion.repository.UserRepository;
+import com.bank.credyunion.repository.UsuarioRepository;
 import com.bank.credyunion.service.UsuarioService;
 import com.bank.credyunion.util.converter.UsuarioConverter;
 
@@ -16,7 +16,7 @@ import com.bank.credyunion.util.converter.UsuarioConverter;
 public class UsuarioServiceImpl implements UsuarioService {
 
 	@Autowired
-	UserRepository userRepository;
+	UsuarioRepository userRepository;
 	
 	/* (non-Javadoc)
 	 * @see com.bank.credyunion.service.UserService#registrarUsuario(com.bank.credyunion.model.Usuario)

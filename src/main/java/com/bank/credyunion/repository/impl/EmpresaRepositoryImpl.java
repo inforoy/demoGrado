@@ -10,12 +10,12 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
 
 import com.bank.credyunion.domain.T006_Empresa;
-import com.bank.credyunion.repository.BusinessRepository;
+import com.bank.credyunion.repository.EmpresaRepository;
 import com.bank.credyunion.repository.mapper.BusinessMapper;
 import com.bank.credyunion.repository.utils.SqlUtilsBusiness;
 
 @Repository("empresaRepository")
-public class BusinessRepositoryImpl implements BusinessRepository {
+public class EmpresaRepositoryImpl implements EmpresaRepository {
 
 	private static final int SQL_PARAMS_UNO = 1;
 	

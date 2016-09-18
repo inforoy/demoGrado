@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.bank.credyunion.domain.T020_Usuario;
 
-public interface UserRepository {
+public interface UsuarioRepository {
 	
 	boolean registerUser(T020_Usuario usuarioModel);
 	boolean updateUser(T020_Usuario usuarioModel);

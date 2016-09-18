@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.bank.credyunion.domain.T006_Empresa;
 
-public interface BusinessRepository {
+public interface EmpresaRepository {
 	
 	boolean registerBusiness(T006_Empresa empresa);
 	boolean updateBusiness(T006_Empresa empresa);
