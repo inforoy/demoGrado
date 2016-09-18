@@ -3,14 +3,13 @@ package com.bank.credyunion.service;
 import java.util.List;
 
 import com.bank.credyunion.bean.EmpresaBean;
-import com.bank.credyunion.bean.UsuarioBean;
 
 public interface EmpresaService {
 	
-	boolean registerBusiness(EmpresaBean empresa);
-	boolean updateBusiness(EmpresaBean empresa);
-	boolean deleteBusiness(EmpresaBean empresa);
-	EmpresaBean findBusinessById(EmpresaBean empresa);
-	List<EmpresaBean> findAllBusiness();
+	boolean registerEmpresa(EmpresaBean empresa);
+	boolean updateEmpresa(EmpresaBean empresa);
+	boolean deleteEmpresa(EmpresaBean empresa);
+	EmpresaBean findEmpresaById(EmpresaBean empresa);
+	List<EmpresaBean> findAllEmpresas();
 	
 }

@@ -1,6 +1,6 @@
 package com.bank.credyunion.repository.utils;
 
-public final class SqlUtilsBusiness {
+public final class SqlUtils_Empresa {
 
 	private static final String SQL_BUSINESS_INSERT = " INSERT INTO "
     		+ " EMPRESA ( id_empresa, descripcion, fecha_creacion, indicador_emilinacion ) "
@@ -21,7 +21,7 @@ public final class SqlUtilsBusiness {
 	
 	private static final String SQL_BUSINESS_COUNT = " SELECT COUNT(*) FROM EMPRESA ";
 	
-    private SqlUtilsBusiness(){}
+    private SqlUtils_Empresa(){}
     
     public static String getSQLRegisterBusiness() {
 		StringBuilder query = new StringBuilder();

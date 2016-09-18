@@ -6,11 +6,11 @@ import com.bank.credyunion.domain.T020_Usuario;
 
 public interface UsuarioRepository {
 	
-	boolean registerUser(T020_Usuario usuarioModel);
-	boolean updateUser(T020_Usuario usuarioModel);
-	boolean deleteUser(T020_Usuario usuarioModel);
-	T020_Usuario findUserById(T020_Usuario usuarioModel);
-	List<T020_Usuario> findAllUsers();
-	int getNextUser();
+	boolean registerUsuario(T020_Usuario usuarioModel);
+	boolean updateUsuario(T020_Usuario usuarioModel);
+	boolean deleteUsuario(T020_Usuario usuarioModel);
+	T020_Usuario findUsuarioById(T020_Usuario usuarioModel);
+	List<T020_Usuario> findAllUsuarios();
+	int getNextUsuario();
 	
 }

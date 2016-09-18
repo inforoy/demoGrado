@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class T013_PlanDePagoCredito implements Serializable {
 
-	private static final long serialVersionUID = 8970995986279244728L;// plan de pagos de credito
+	private static final long serialVersionUID = 8970995986279244728L;
 	private String idPlanDePagoCredito;
 	private String idCredito;
 	private BigDecimal capital;

@@ -1,6 +1,6 @@
 package com.bank.credyunion.repository.utils;
 
-public final class SqlUtilsUser {
+public final class SqlUtils_Usuario {
 
     private static final String SQL_USER_INSERT = " INSERT INTO  "
     		+ " USUARIO ( id_usuario, usuario, contrasenia, nombres, apellido_paterno, apellido_materno, indicador_eliminacion ) "
@@ -21,7 +21,7 @@ public final class SqlUtilsUser {
     
     private static final String SQL_USERS_COUNT = " SELECT COUNT(*) FROM USUARIO ";
     
-    private SqlUtilsUser(){}
+    private SqlUtils_Usuario(){}
     
     public static String getSQLRegisterUser() {
 		StringBuilder query = new StringBuilder();

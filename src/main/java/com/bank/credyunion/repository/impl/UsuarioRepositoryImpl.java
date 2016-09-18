@@ -12,9 +12,9 @@ import org.springframework.util.CollectionUtils;
 import com.bank.credyunion.domain.T020_Usuario;
 import com.bank.credyunion.repository.UsuarioRepository;
 import com.bank.credyunion.repository.mapper.UserMapper;
-import com.bank.credyunion.repository.utils.SqlUtilsUser;
+import com.bank.credyunion.repository.utils.SqlUtils_Usuario;
 
-@Repository("userRepository")
+@Repository("usuarioRepository")
 public class UsuarioRepositoryImpl implements UsuarioRepository {
 	
 	private static final int SQL_PARAMS_UNO = 1;
@@ -23,8 +23,8 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
     private JdbcTemplate jdbcTemplate;
 	
 	@Override
-	public boolean registerUser(T020_Usuario usuario) {
-		String sqlInsert = SqlUtilsUser.getSQLRegisterUser();
+	public boolean registerUsuario(T020_Usuario usuario) {
+		String sqlInsert = SqlUtils_Usuario.getSQLRegisterUser();
 		int result = jdbcTemplate.update(sqlInsert, new Object[] {
 				usuario.getIdUsuario(),
 				usuario.getNombreUsuario(),
@@ -38,8 +38,8 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 	}
 	
 	@Override
-	public boolean updateUser(T020_Usuario usuario) {
-		String sqlUpdate = SqlUtilsUser.getSQLUpdateUser();
+	public boolean updateUsuario(T020_Usuario usuario) {
+		String sqlUpdate = SqlUtils_Usuario.getSQLUpdateUser();
 		int result = jdbcTemplate.update(sqlUpdate,new Object[] {
 	    		usuario.getNombres(),
 	    		usuario.getApellidoPaterno(),
@@ -50,8 +50,8 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 	}
 	
 	@Override
-	public boolean deleteUser(T020_Usuario usuario) {
-		String sqlDelete = SqlUtilsUser.getSQLDeleteUser();
+	public boolean deleteUsuario(T020_Usuario usuario) {
+		String sqlDelete = SqlUtils_Usuario.getSQLDeleteUser();
 		int result = jdbcTemplate.update(sqlDelete,new Object[] {
 				usuario.getIndicadorEliminacion(),
 	    		usuario.getIdUsuario()
@@ -60,8 +60,8 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 	}
 	
 	@Override
-	public T020_Usuario findUserById(T020_Usuario usuarioModel) {
-		String sqlFindUserById = SqlUtilsUser.getSqlFindUserById();
+	public T020_Usuario findUsuarioById(T020_Usuario usuarioModel) {
+		String sqlFindUserById = SqlUtils_Usuario.getSqlFindUserById();
         List<T020_Usuario> listAllUsers = new ArrayList<T020_Usuario>();
     	
         List<Map<String, Object>> rowUsers = jdbcTemplate.queryForList(sqlFindUserById, new Object[] { 
@@ -76,8 +76,8 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 	}
 
 	@Override
-	public List<T020_Usuario> findAllUsers() {
-		String sqlFindAllUsers = SqlUtilsUser.getSqlFindAllUsers(); 
+	public List<T020_Usuario> findAllUsuarios() {
+		String sqlFindAllUsers = SqlUtils_Usuario.getSqlFindAllUsers(); 
         List<T020_Usuario> listAllUsers = new ArrayList<T020_Usuario>();
     	List<Map<String, Object>> rowUsers = jdbcTemplate.queryForList(sqlFindAllUsers);
     	listAllUsers = new UserMapper().listUserMapper(rowUsers);
@@ -85,8 +85,8 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 	}
 	
 	@SuppressWarnings("deprecation")
-	public int getNextUser(){
-		String sqlCount = SqlUtilsUser.getSqlCount();
+	public int getNextUsuario(){
+		String sqlCount = SqlUtils_Usuario.getSqlCount();
 		int count = jdbcTemplate.queryForInt(sqlCount);
 		count = count + SQL_PARAMS_UNO;
 		return count;

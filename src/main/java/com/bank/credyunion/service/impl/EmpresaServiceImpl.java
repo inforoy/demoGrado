@@ -7,59 +7,58 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bank.credyunion.bean.EmpresaBean;
-import com.bank.credyunion.bean.UsuarioBean;
 import com.bank.credyunion.domain.T006_Empresa;
 import com.bank.credyunion.repository.EmpresaRepository;
 import com.bank.credyunion.service.EmpresaService;
-import com.bank.credyunion.util.converter.BusinessConverter;
+import com.bank.credyunion.util.converter.EmpresaConverter;
 
 @Service("businessService")
 public class EmpresaServiceImpl implements EmpresaService {
 
 	@Autowired
-    private EmpresaRepository businessRepository;
+    private EmpresaRepository empresaRepository;
 
 	@Override
-	public boolean registerBusiness(EmpresaBean empresa) {
-		int next = businessRepository.getNextBusiness();
+	public boolean registerEmpresa(EmpresaBean empresa) {
+		int next = empresaRepository.getNextBusiness();
 		empresa.setIdEmpresa(String.valueOf(next));
 		empresa.setIndicadorEliminacion("0");
 		
 		T006_Empresa tEmpresa = new T006_Empresa();
-		tEmpresa = BusinessConverter.parseConverter_FromBeanToPojo(empresa);
-		boolean isRegister = businessRepository.registerBusiness(tEmpresa);
+		tEmpresa = EmpresaConverter.parseConverter_FromBeanToPojo(empresa);
+		boolean isRegister = empresaRepository.registerBusiness(tEmpresa);
 		return isRegister;
 	}
 
 	@Override
-	public boolean updateBusiness(EmpresaBean empresa) {
-		T006_Empresa tEmpresa = BusinessConverter.parseConverter_FromBeanToPojo(empresa);
-		boolean isUpdate = businessRepository.updateBusiness(tEmpresa);
+	public boolean updateEmpresa(EmpresaBean empresa) {
+		T006_Empresa tEmpresa = EmpresaConverter.parseConverter_FromBeanToPojo(empresa);
+		boolean isUpdate = empresaRepository.updateBusiness(tEmpresa);
 		return isUpdate;
 	}
 
 	@Override
-	public boolean deleteBusiness(EmpresaBean empresa) {
+	public boolean deleteEmpresa(EmpresaBean empresa) {
 		empresa.setIndicadorEliminacion("0");
-		T006_Empresa tEmpresa = BusinessConverter.parseConverter_FromBeanToPojo(empresa);
-		boolean result = businessRepository.deleteBusiness(tEmpresa);
+		T006_Empresa tEmpresa = EmpresaConverter.parseConverter_FromBeanToPojo(empresa);
+		boolean result = empresaRepository.deleteBusiness(tEmpresa);
 		return result;
 	}
 
 	@Override
-	public EmpresaBean findBusinessById(EmpresaBean empresa) {
-		T006_Empresa tEmpresa = BusinessConverter.parseConverter_FromBeanToPojo(empresa);
-		tEmpresa = businessRepository.findBusinessById(tEmpresa);
-		EmpresaBean newEmpresa = BusinessConverter.parseConverter_FromPojoToBean(tEmpresa);
+	public EmpresaBean findEmpresaById(EmpresaBean empresa) {
+		T006_Empresa tEmpresa = EmpresaConverter.parseConverter_FromBeanToPojo(empresa);
+		tEmpresa = empresaRepository.findBusinessById(tEmpresa);
+		EmpresaBean newEmpresa = EmpresaConverter.parseConverter_FromPojoToBean(tEmpresa);
 		return newEmpresa;
 	}
 
 	@Override
-	public List<EmpresaBean> findAllBusiness() {
-		List<T006_Empresa> listBusiness = businessRepository.findAllBusiness();
+	public List<EmpresaBean> findAllEmpresas() {
+		List<T006_Empresa> listBusiness = empresaRepository.findAllBusiness();
 		List<EmpresaBean> listadoEmpresas = new ArrayList<EmpresaBean>();
 		for (T006_Empresa item : listBusiness ) {
-			EmpresaBean empresa = BusinessConverter.parseConverter_FromPojoToBean(item);
+			EmpresaBean empresa = EmpresaConverter.parseConverter_FromPojoToBean(item);
 			listadoEmpresas.add(empresa);
 		}
 		return listadoEmpresas;

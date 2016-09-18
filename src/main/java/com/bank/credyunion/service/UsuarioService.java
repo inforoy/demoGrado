@@ -6,10 +6,10 @@ import com.bank.credyunion.bean.UsuarioBean;
 
 public interface UsuarioService {
 
-	boolean registerUser(UsuarioBean usuarioBean);
-	boolean updateUser(UsuarioBean usuarioBean);
-	boolean deleteUser(UsuarioBean usuarioBean);
-	UsuarioBean findUserById(UsuarioBean usuarioBean);
-	List<UsuarioBean> findAllUsers();
+	boolean registerUsuario(UsuarioBean usuarioBean);
+	boolean updateUsuario(UsuarioBean usuarioBean);
+	boolean deleteUsuario(UsuarioBean usuarioBean);
+	UsuarioBean findUsuarioById(UsuarioBean usuarioBean);
+	List<UsuarioBean> findAllUsuarios();
 
 }

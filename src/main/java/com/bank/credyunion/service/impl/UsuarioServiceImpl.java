@@ -16,47 +16,44 @@ import com.bank.credyunion.util.converter.UsuarioConverter;
 public class UsuarioServiceImpl implements UsuarioService {
 
 	@Autowired
-	UsuarioRepository userRepository;
+	private UsuarioRepository usuarioRepository;
 	
-	/* (non-Javadoc)
-	 * @see com.bank.credyunion.service.UserService#registrarUsuario(com.bank.credyunion.model.Usuario)
-	 */
-	public boolean registerUser(UsuarioBean usuarioBean) {
+	public boolean registerUsuario(UsuarioBean usuarioBean) {
 		// validar que el usuario ya existe
-		int count = userRepository.getNextUser();
+		int count = usuarioRepository.getNextUsuario();
 		usuarioBean.setIdUsuario(String.valueOf(count));
 		usuarioBean.setIndicadorEliminacion("0");
 		T020_Usuario usuarioModel = UsuarioConverter.parseConverter_FromUsuarioBeanToT020Usuario(usuarioBean);
-		boolean result = userRepository.registerUser(usuarioModel);
+		boolean result = usuarioRepository.registerUsuario(usuarioModel);
 		return result;
 	}
 
 	@Override
-	public boolean updateUser(UsuarioBean usuarioBean) {
+	public boolean updateUsuario(UsuarioBean usuarioBean) {
 		T020_Usuario usuarioModel = UsuarioConverter.parseConverter_FromUsuarioBeanToT020Usuario(usuarioBean);
-		boolean result = userRepository.updateUser(usuarioModel);
+		boolean result = usuarioRepository.updateUsuario(usuarioModel);
 		return result;
 	}
 
 	@Override
-	public boolean deleteUser(UsuarioBean usuarioBean) {
+	public boolean deleteUsuario(UsuarioBean usuarioBean) {
 		usuarioBean.setIndicadorEliminacion("1");
 		T020_Usuario usuarioModel = UsuarioConverter.parseConverter_FromUsuarioBeanToT020Usuario(usuarioBean);
-		boolean result = userRepository.deleteUser(usuarioModel);
+		boolean result = usuarioRepository.deleteUsuario(usuarioModel);
 		return result;
 	}
 
 	@Override
-	public UsuarioBean findUserById(UsuarioBean usuarioBean) {
+	public UsuarioBean findUsuarioById(UsuarioBean usuarioBean) {
 		T020_Usuario usuarioModel = UsuarioConverter.parseConverter_FromUsuarioBeanToT020Usuario(usuarioBean);
-		usuarioModel = userRepository.findUserById(usuarioModel);
+		usuarioModel = usuarioRepository.findUsuarioById(usuarioModel);
 		UsuarioBean newUsuario = UsuarioConverter.parseConverter_FromToT020UsuarioToUsuarioBean(usuarioModel);
 		return newUsuario;
 	}
 
 	@Override
-	public List<UsuarioBean> findAllUsers() {
-		List<T020_Usuario> listUsers = userRepository.findAllUsers();
+	public List<UsuarioBean> findAllUsuarios() {
+		List<T020_Usuario> listUsers = usuarioRepository.findAllUsuarios();
 		List<UsuarioBean> listadoUsuarios = new ArrayList<UsuarioBean>();
 		for (T020_Usuario item : listUsers) {
 			UsuarioBean usuario = UsuarioConverter.parseConverter_FromToT020UsuarioToUsuarioBean(item);

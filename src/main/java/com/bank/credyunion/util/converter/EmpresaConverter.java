@@ -3,7 +3,7 @@ package com.bank.credyunion.util.converter;
 import com.bank.credyunion.bean.EmpresaBean;
 import com.bank.credyunion.domain.T006_Empresa;
 
-public class BusinessConverter {
+public class EmpresaConverter {
 	
 	public static T006_Empresa parseConverter_FromBeanToPojo(EmpresaBean empresaBean){
 		T006_Empresa tEmpresa = new T006_Empresa();

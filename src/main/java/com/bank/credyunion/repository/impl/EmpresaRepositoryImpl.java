@@ -12,7 +12,7 @@ import org.springframework.util.CollectionUtils;
 import com.bank.credyunion.domain.T006_Empresa;
 import com.bank.credyunion.repository.EmpresaRepository;
 import com.bank.credyunion.repository.mapper.BusinessMapper;
-import com.bank.credyunion.repository.utils.SqlUtilsBusiness;
+import com.bank.credyunion.repository.utils.SqlUtils_Empresa;
 
 @Repository("empresaRepository")
 public class EmpresaRepositoryImpl implements EmpresaRepository {
@@ -23,7 +23,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
     private JdbcTemplate jdbcTemplate;
 
 	public boolean registerBusiness(T006_Empresa empresa) {
-		String sqlInsert = SqlUtilsBusiness.getSQLRegisterBusiness();
+		String sqlInsert = SqlUtils_Empresa.getSQLRegisterBusiness();
 		int result = jdbcTemplate.update(sqlInsert, new Object[] {
 				empresa.getIdEmpresa(),
 				empresa.getDescripcion(),
@@ -34,7 +34,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
 	}
 
 	public boolean updateBusiness(T006_Empresa empresa) {
-		String sqlUpdate = SqlUtilsBusiness.getSQLUpdateBusiness();
+		String sqlUpdate = SqlUtils_Empresa.getSQLUpdateBusiness();
 		int result = jdbcTemplate.update(sqlUpdate,new Object[] {
 				empresa.getDescripcion(),
 				empresa.getFechaDeCreacion(),
@@ -44,7 +44,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
 	}
 
 	public boolean deleteBusiness(T006_Empresa empresa) {
-		String sqlDelete = SqlUtilsBusiness.getSQLDeleteBusiness();
+		String sqlDelete = SqlUtils_Empresa.getSQLDeleteBusiness();
 		int result = jdbcTemplate.update(sqlDelete,new Object[] {
 				empresa.getIndicadorEliminacion(),
 				empresa.getIdEmpresa()
@@ -53,7 +53,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
 	}
 
 	public T006_Empresa findBusinessById(T006_Empresa empresa) {
-		String sqlFindUserById = SqlUtilsBusiness.getSqlFindBusinessById();
+		String sqlFindUserById = SqlUtils_Empresa.getSqlFindBusinessById();
 		List<T006_Empresa> listBusiness = new ArrayList<T006_Empresa>();
 		
         List<Map<String, Object>> rowBusiness = jdbcTemplate.queryForList(sqlFindUserById, new Object[] { 
@@ -67,7 +67,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
 	}
 
 	public List<T006_Empresa> findAllBusiness() {
-		String sqlFindAllBusiness = SqlUtilsBusiness.getSqlFindAllBusiness();
+		String sqlFindAllBusiness = SqlUtils_Empresa.getSqlFindAllBusiness();
 		List<T006_Empresa> listAllBusiness = new ArrayList<T006_Empresa>();
 		List<Map<String, Object>> rowBusiness = jdbcTemplate.queryForList(sqlFindAllBusiness);
 		listAllBusiness = new BusinessMapper().listBusinessMapper(rowBusiness);
@@ -76,7 +76,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
 
 	@SuppressWarnings("deprecation")
 	public int getNextBusiness() {
-		String sqlCountBusiness = SqlUtilsBusiness.getSqlBusinessCount();
+		String sqlCountBusiness = SqlUtils_Empresa.getSqlBusinessCount();
 		int count = jdbcTemplate.queryForInt(sqlCountBusiness);
 		count = count + SQL_PARAMS_UNO;
 		return count;
