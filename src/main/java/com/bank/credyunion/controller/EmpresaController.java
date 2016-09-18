@@ -27,18 +27,18 @@ public class EmpresaController {
 		empresa.setDescripcion("CredyUnion");
 		empresa.setFechaDeCreacion(new Date());
 		try {
-			boolean istrue = businessService.registerBusiness(empresa);
-			
-			empresa.setDescripcion("nueva descripcion");
-			empresa.setFechaDeCreacion(new Date());
-			boolean istrue2 = businessService.updateBusiness(empresa);
-			
-			empresa.setIdEmpresa("1");
-			EmpresaBean empre2 = businessService.findBusinessById(empresa);
-			
-			List<EmpresaBean> list = businessService.findAllBusiness();
-			
-			boolean istrue3 = businessService.deleteBusiness(empresa);
+//			boolean istrue = businessService.registerBusiness(empresa);
+//			
+//			empresa.setDescripcion("nueva descripcion");
+//			empresa.setFechaDeCreacion(new Date());
+//			boolean istrue2 = businessService.updateBusiness(empresa);
+//			
+//			empresa.setIdEmpresa("1");
+//			EmpresaBean empre2 = businessService.findBusinessById(empresa);
+//			
+//			List<EmpresaBean> list = businessService.findAllBusiness();
+//			
+//			boolean istrue3 = businessService.deleteBusiness(empresa);
 		} catch (Exception e) {
 			System.out.println("Error"+e);
 		}

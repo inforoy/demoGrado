@@ -1,4 +1,4 @@
-package com.bank.credyunion.model;
+package com.bank.credyunion.domain;
 
 import java.io.Serializable;
 import java.util.Date;

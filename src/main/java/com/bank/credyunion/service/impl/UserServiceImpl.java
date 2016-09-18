@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bank.credyunion.bean.UsuarioBean;
-import com.bank.credyunion.model.T020_Usuario;
+import com.bank.credyunion.domain.T020_Usuario;
 import com.bank.credyunion.repository.UserRepository;
 import com.bank.credyunion.service.UserService;
 import com.bank.credyunion.util.converter.UsuarioConverter;

@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import com.bank.credyunion.model.T006_Empresa;
+import com.bank.credyunion.domain.T006_Empresa;
 
 public class BusinessMapper implements Serializable {
 

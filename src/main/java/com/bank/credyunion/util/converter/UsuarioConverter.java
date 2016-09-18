@@ -1,7 +1,7 @@
 package com.bank.credyunion.util.converter;
 
 import com.bank.credyunion.bean.UsuarioBean;
-import com.bank.credyunion.model.T020_Usuario;
+import com.bank.credyunion.domain.T020_Usuario;
 
 public class UsuarioConverter {
 	

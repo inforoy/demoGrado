@@ -1,7 +1,7 @@
 package com.bank.credyunion.util.converter;
 
 import com.bank.credyunion.bean.EmpresaBean;
-import com.bank.credyunion.model.T006_Empresa;
+import com.bank.credyunion.domain.T006_Empresa;
 
 public class BusinessConverter {
 	

@@ -1,11 +1,11 @@
-package com.bank.credyunion.model;
+package com.bank.credyunion.domain;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class T012_OperacionDetalle implements Serializable {
 
-	private static final long serialVersionUID = 9124820583532228854L; // detalle de la operacion
+	private static final long serialVersionUID = 9124820583532228854L;
 	private String idOperacionDetalle;
 	private String idOperacion;
 	private BigDecimal monto;

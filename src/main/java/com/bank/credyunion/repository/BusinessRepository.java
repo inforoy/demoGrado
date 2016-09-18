@@ -2,7 +2,7 @@ package com.bank.credyunion.repository;
 
 import java.util.List;
 
-import com.bank.credyunion.model.T006_Empresa;
+import com.bank.credyunion.domain.T006_Empresa;
 
 public interface BusinessRepository {
 	

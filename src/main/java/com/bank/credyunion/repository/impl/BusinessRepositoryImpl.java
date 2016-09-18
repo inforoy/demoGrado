@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
 
-import com.bank.credyunion.model.T006_Empresa;
+import com.bank.credyunion.domain.T006_Empresa;
 import com.bank.credyunion.repository.BusinessRepository;
 import com.bank.credyunion.repository.mapper.BusinessMapper;
 import com.bank.credyunion.repository.utils.SqlUtilsBusiness;

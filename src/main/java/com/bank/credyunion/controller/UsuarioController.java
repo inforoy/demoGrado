@@ -17,7 +17,7 @@ import com.bank.credyunion.service.UserService;
 import com.google.gson.Gson;
 
 @Controller
-public class UserController {
+public class UsuarioController {
 
 	@Autowired
 	UserService userService;

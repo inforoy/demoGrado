@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.bank.credyunion.bean.EmpresaBean;
 import com.bank.credyunion.bean.UsuarioBean;
-import com.bank.credyunion.model.T006_Empresa;
+import com.bank.credyunion.domain.T006_Empresa;
 import com.bank.credyunion.repository.BusinessRepository;
 import com.bank.credyunion.service.BusinessService;
 import com.bank.credyunion.util.converter.BusinessConverter;
