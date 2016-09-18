@@ -5,7 +5,7 @@ import java.util.List;
 import com.bank.credyunion.bean.EmpresaBean;
 import com.bank.credyunion.bean.UsuarioBean;
 
-public interface BusinessService {
+public interface EmpresaService {
 	
 	boolean registerBusiness(EmpresaBean empresa);
 	boolean updateBusiness(EmpresaBean empresa);

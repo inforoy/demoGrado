@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bank.credyunion.bean.EmpresaBean;
-import com.bank.credyunion.service.BusinessService;
+import com.bank.credyunion.service.EmpresaService;
 
 @Controller
 public class EmpresaController {
 
 	@Autowired
-	BusinessService businessService;
+	EmpresaService businessService;
 	
 	@RequestMapping(value="/empresaTest.htm", method = RequestMethod.GET)
 	public String loadEmpresa(HttpServletRequest request, HttpServletResponse response) throws Exception {

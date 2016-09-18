@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bank.credyunion.bean.UsuarioBean;
 import com.bank.credyunion.model.GeneralView;
-import com.bank.credyunion.service.UserService;
+import com.bank.credyunion.service.UsuarioService;
 import com.google.gson.Gson;
 
 @Controller
 public class UsuarioController {
 
 	@Autowired
-	UserService userService;
+	UsuarioService userService;
 	
 	@RequestMapping(value="/loadHome.htm", method = RequestMethod.GET)
 	public String loadHome(HttpServletRequest request, HttpServletResponse response) throws Exception {

@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.bank.credyunion.bean.UsuarioBean;
 
-public interface UserService {
+public interface UsuarioService {
 
 	boolean registerUser(UsuarioBean usuarioBean);
 	boolean updateUser(UsuarioBean usuarioBean);
