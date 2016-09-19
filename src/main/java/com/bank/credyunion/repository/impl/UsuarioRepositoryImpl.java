@@ -11,7 +11,7 @@ import org.springframework.util.CollectionUtils;
 
 import com.bank.credyunion.domain.T020_Usuario;
 import com.bank.credyunion.repository.UsuarioRepository;
-import com.bank.credyunion.repository.mapper.UserMapper;
+import com.bank.credyunion.repository.mapper.UsuarioMapper;
 import com.bank.credyunion.repository.utils.SqlUtils_Usuario;
 
 @Repository("usuarioRepository")
@@ -68,7 +68,7 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
     			usuarioModel.getIdUsuario()
     	} );
     	
-    	listAllUsers = new UserMapper().listUserMapper(rowUsers);
+    	listAllUsers = new UsuarioMapper().listUserMapper(rowUsers);
     	if (!CollectionUtils.isEmpty(listAllUsers))	{
     		usuarioModel = listAllUsers.get(0);
     	}
@@ -80,7 +80,7 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 		String sqlFindAllUsers = SqlUtils_Usuario.getSqlFindAllUsers(); 
         List<T020_Usuario> listAllUsers = new ArrayList<T020_Usuario>();
     	List<Map<String, Object>> rowUsers = jdbcTemplate.queryForList(sqlFindAllUsers);
-    	listAllUsers = new UserMapper().listUserMapper(rowUsers);
+    	listAllUsers = new UsuarioMapper().listUserMapper(rowUsers);
 		return listAllUsers;
 	}
 	

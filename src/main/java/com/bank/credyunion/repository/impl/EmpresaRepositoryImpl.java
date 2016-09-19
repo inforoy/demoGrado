@@ -11,7 +11,7 @@ import org.springframework.util.CollectionUtils;
 
 import com.bank.credyunion.domain.T006_Empresa;
 import com.bank.credyunion.repository.EmpresaRepository;
-import com.bank.credyunion.repository.mapper.BusinessMapper;
+import com.bank.credyunion.repository.mapper.EmpresaMapper;
 import com.bank.credyunion.repository.utils.SqlUtils_Empresa;
 
 @Repository("empresaRepository")
@@ -59,7 +59,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
         List<Map<String, Object>> rowBusiness = jdbcTemplate.queryForList(sqlFindUserById, new Object[] { 
         		empresa.getIdEmpresa()
     	} );
-        listBusiness = new BusinessMapper().listBusinessMapper(rowBusiness);
+        listBusiness = new EmpresaMapper().listBusinessMapper(rowBusiness);
     	if (!CollectionUtils.isEmpty(listBusiness))	{
     		empresa = listBusiness.get(0);
     	}
@@ -70,7 +70,7 @@ public class EmpresaRepositoryImpl implements EmpresaRepository {
 		String sqlFindAllBusiness = SqlUtils_Empresa.getSqlFindAllBusiness();
 		List<T006_Empresa> listAllBusiness = new ArrayList<T006_Empresa>();
 		List<Map<String, Object>> rowBusiness = jdbcTemplate.queryForList(sqlFindAllBusiness);
-		listAllBusiness = new BusinessMapper().listBusinessMapper(rowBusiness);
+		listAllBusiness = new EmpresaMapper().listBusinessMapper(rowBusiness);
 		return listAllBusiness;
 	}
 

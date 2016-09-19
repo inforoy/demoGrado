@@ -5,7 +5,7 @@ import com.bank.credyunion.domain.T020_Usuario;
 
 public class UsuarioConverter {
 	
-	public static T020_Usuario parseConverter_FromUsuarioBeanToT020Usuario(UsuarioBean usuarioBean){
+	public static T020_Usuario parseConverter_FromBeanToPojo(UsuarioBean usuarioBean){
        T020_Usuario usuarioModel = new T020_Usuario();
        usuarioModel.setIdUsuario(usuarioBean.getIdUsuario());
        usuarioModel.setNombres(usuarioBean.getNombres());
@@ -17,7 +17,7 @@ public class UsuarioConverter {
        return usuarioModel;
 	}
 	
-	public static UsuarioBean parseConverter_FromToT020UsuarioToUsuarioBean(T020_Usuario usuario){
+	public static UsuarioBean parseConverter_FromPojoToBean(T020_Usuario usuario){
 		UsuarioBean usuarioBean = new UsuarioBean();
 		usuarioBean.setIdUsuario(usuario.getIdUsuario());
 		usuarioBean.setNombres(usuario.getNombres());

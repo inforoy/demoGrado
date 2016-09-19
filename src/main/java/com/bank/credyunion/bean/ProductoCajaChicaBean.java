@@ -1,12 +1,12 @@
 package com.bank.credyunion.bean;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 public class ProductoCajaChicaBean {
 
 	private String idProductoCajaChica;
 	private String descripcion;
-	private BigInteger monto;
+	private BigDecimal monto;
 	private String indicadorEliminacion;
 	
 	public String getIdProductoCajaChica() {
@@ -21,10 +21,10 @@ public class ProductoCajaChicaBean {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public BigInteger getMonto() {
+	public BigDecimal getMonto() {
 		return monto;
 	}
-	public void setMonto(BigInteger monto) {
+	public void setMonto(BigDecimal monto) {
 		this.monto = monto;
 	}
 	public String getIndicadorEliminacion() {

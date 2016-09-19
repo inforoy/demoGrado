@@ -1,6 +1,7 @@
 package com.bank.credyunion.bean;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 public class MovimientoCajaChicaBean {
 
@@ -9,7 +10,7 @@ public class MovimientoCajaChicaBean {
 	private String idOperacion;
 	private String codigoDeOperacion;
 	private BigDecimal montoDeMovimiento;
-	private BigDecimal fechaDeMovimiento;
+	private Date fechaDeMovimiento;
 	private String movimientoCorrelativo;
 	private BigDecimal saldoCapitalActual; 
 	private BigDecimal saldoCapitalAnterior;
@@ -45,10 +46,10 @@ public class MovimientoCajaChicaBean {
 	public void setMontoDeMovimiento(BigDecimal montoDeMovimiento) {
 		this.montoDeMovimiento = montoDeMovimiento;
 	}
-	public BigDecimal getFechaDeMovimiento() {
+	public Date getFechaDeMovimiento() {
 		return fechaDeMovimiento;
 	}
-	public void setFechaDeMovimiento(BigDecimal fechaDeMovimiento) {
+	public void setFechaDeMovimiento(Date fechaDeMovimiento) {
 		this.fechaDeMovimiento = fechaDeMovimiento;
 	}
 	public String getMovimientoCorrelativo() {

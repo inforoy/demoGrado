@@ -7,7 +7,7 @@ import java.util.Map;
 
 import com.bank.credyunion.domain.T020_Usuario;
 
-public class UserMapper implements Serializable {
+public class UsuarioMapper implements Serializable {
 	
 	private static final long serialVersionUID = -4769179327168144175L;
 	

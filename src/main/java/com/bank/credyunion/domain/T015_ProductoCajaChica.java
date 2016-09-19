@@ -1,14 +1,14 @@
 package com.bank.credyunion.domain;
 
 import java.io.Serializable;
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 public class T015_ProductoCajaChica implements Serializable {
 	
 	private static final long serialVersionUID = -8278430131956512733L;
 	private String idProductoCajaChica;
 	private String descripcion;
-	private BigInteger monto;
+	private BigDecimal monto;
 	private String indicadorEliminacion;
 	
 	public String getIdProductoCajaChica() {
@@ -23,10 +23,10 @@ public class T015_ProductoCajaChica implements Serializable {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public BigInteger getMonto() {
+	public BigDecimal getMonto() {
 		return monto;
 	}
-	public void setMonto(BigInteger monto) {
+	public void setMonto(BigDecimal monto) {
 		this.monto = monto;
 	}
 	public String getIndicadorEliminacion() {

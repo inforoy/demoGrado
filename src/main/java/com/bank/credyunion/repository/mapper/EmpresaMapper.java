@@ -8,7 +8,7 @@ import java.util.Map;
 
 import com.bank.credyunion.domain.T006_Empresa;
 
-public class BusinessMapper implements Serializable {
+public class EmpresaMapper implements Serializable {
 
 	private static final long serialVersionUID = 548503025002839522L;
 
