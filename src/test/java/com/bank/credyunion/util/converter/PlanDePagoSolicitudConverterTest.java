@@ -1,5 +1,7 @@
 package com.bank.credyunion.util.converter;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 
 import com.bank.credyunion.bean.PlanDePagoSolicitudBean;
@@ -11,11 +13,13 @@ public class PlanDePagoSolicitudConverterTest {
 	public void PlanDePagoSolicitudConverter_BeanToPojo(){
 		PlanDePagoSolicitudBean bean = new PlanDePagoSolicitudBean();
 		//bean.setCapital(capital);
+		Assert.assertEquals("", "");
 	}
 	
 	@Test
 	public void PlanDePagoSolicitudConverter_PojoToBean(){
 		T014_PlanDePagoSolicitud model = new T014_PlanDePagoSolicitud();
+		Assert.assertEquals("", "");
 	}
 	
 }

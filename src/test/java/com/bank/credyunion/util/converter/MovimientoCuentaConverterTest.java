@@ -1,5 +1,7 @@
 package com.bank.credyunion.util.converter;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 
 import com.bank.credyunion.bean.MovimientoCuentaBean;
@@ -11,11 +13,13 @@ public class MovimientoCuentaConverterTest {
 	public void MovimientoCuentaConverter_BeanToPojo(){
 		MovimientoCuentaBean bean = new MovimientoCuentaBean();
 //		bean.setCodigoDeOperacion(codigoDeOperacion);
+		Assert.assertEquals("", "");
 	}
 	
 	@Test
 	public void MovimientoCuentaConverter_PojoToBean(){
 		T010_MovimientoCuenta model = new T010_MovimientoCuenta();
+		Assert.assertEquals("", "");
 	}
 	
 }
