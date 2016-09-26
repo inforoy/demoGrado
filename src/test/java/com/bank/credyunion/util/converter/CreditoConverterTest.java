@@ -12,6 +12,7 @@ import com.bank.credyunion.domain.T004_Credito;
 
 public class CreditoConverterTest {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CreditoConverter_BeanToPojo(){
 		CreditoBean bean = new CreditoBean();
@@ -64,6 +65,7 @@ public class CreditoConverterTest {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CreditoConverter_PojoToBean(){
 		T004_Credito model = new T004_Credito();

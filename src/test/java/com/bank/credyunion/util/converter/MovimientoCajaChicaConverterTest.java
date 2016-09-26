@@ -13,6 +13,7 @@ import com.bank.credyunion.domain.T008_MovimientoCajaChica;
 
 public class MovimientoCajaChicaConverterTest {
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	@Ignore
 	public void IngresosEgresosConverter_BeanToPojo(){
@@ -43,6 +44,7 @@ public class MovimientoCajaChicaConverterTest {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	@Ignore
 	public void IngresosEgresosConverter_PojoToBean(){

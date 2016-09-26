@@ -22,7 +22,6 @@ public class MovimientoCreditoBean {
 	private String codigoUsuario;
 	private String codigoAgencia;
 	private String indicadorEliminacion;
-	
 	public String getIdMovimientoCredito() {
 		return idMovimientoCredito;
 	}
@@ -125,6 +124,5 @@ public class MovimientoCreditoBean {
 	public void setIndicadorEliminacion(String indicadorEliminacion) {
 		this.indicadorEliminacion = indicadorEliminacion;
 	}
-	
 	
 }

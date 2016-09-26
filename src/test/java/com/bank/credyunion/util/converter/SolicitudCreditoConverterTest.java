@@ -12,6 +12,7 @@ import com.bank.credyunion.domain.T019_SolicitudCredito;
 
 public class SolicitudCreditoConverterTest {
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void SolicitudCreditoConverter_BeanToPojo(){
 		SolicitudCreditoBean bean = new SolicitudCreditoBean();
@@ -47,6 +48,7 @@ public class SolicitudCreditoConverterTest {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void SolicitudCreditoConverter_PojoToBean(){
 		T019_SolicitudCredito model = new T019_SolicitudCredito();

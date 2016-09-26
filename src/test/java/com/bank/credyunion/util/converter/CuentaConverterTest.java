@@ -12,6 +12,7 @@ import com.bank.credyunion.domain.T005_Cuenta;
 
 public class CuentaConverterTest {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CuentaConverter_BeanToPojo(){
 		CuentaBean bean = new CuentaBean();
@@ -51,6 +52,7 @@ public class CuentaConverterTest {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CuentaConverter_PojoToBean(){
 		T005_Cuenta model = new T005_Cuenta();

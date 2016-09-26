@@ -12,6 +12,7 @@ import com.bank.credyunion.domain.T003_CajaChica;
 
 public class CajaChicaConverterTest {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CajaChicaConverter_BeanToPojo(){
 		CajaChicaBean bean = new CajaChicaBean();
@@ -38,6 +39,7 @@ public class CajaChicaConverterTest {
 		Assert.assertEquals(new BigDecimal(15.25), model.getSaldoDeCierre());
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CajaChicaConverter_PojoToBean(){
 		T003_CajaChica model = new T003_CajaChica();

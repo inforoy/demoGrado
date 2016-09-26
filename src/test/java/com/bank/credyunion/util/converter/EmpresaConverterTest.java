@@ -11,6 +11,7 @@ import com.bank.credyunion.domain.T006_Empresa;
 
 public class EmpresaConverterTest {
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void EmpresaConverter_BeanToPojo(){
 		EmpresaBean bean = new EmpresaBean();
@@ -27,6 +28,7 @@ public class EmpresaConverterTest {
 		Assert.assertEquals("indicadorEliminacion", model.getIndicadorEliminacion());
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void EmpresaConverter_PojoToBean(){
 		T006_Empresa model = new T006_Empresa();

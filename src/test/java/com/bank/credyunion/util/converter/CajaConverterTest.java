@@ -12,6 +12,7 @@ import com.bank.credyunion.domain.T002_Caja;
 
 public class CajaConverterTest {
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CajaConverter_BeanToPojo(){
 		CajaBean bean = new CajaBean();
@@ -45,6 +46,7 @@ public class CajaConverterTest {
 		
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void CajaConverter_PojoToBean(){
 		T002_Caja model = new T002_Caja();

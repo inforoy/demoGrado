@@ -128,5 +128,4 @@ public class T009_MovimientoCredito implements Serializable {
 		this.indicadorEliminacion = indicadorEliminacion;
 	}
 	
-	
 }
