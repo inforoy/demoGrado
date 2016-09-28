@@ -5,7 +5,6 @@ import java.util.Date;
 
 import junit.framework.Assert;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bank.credyunion.bean.MovimientoCajaChicaBean;
@@ -15,7 +14,6 @@ public class MovimientoCajaChicaConverterTest {
 	
 	@SuppressWarnings("deprecation")
 	@Test
-	@Ignore
 	public void IngresosEgresosConverter_BeanToPojo(){
 		MovimientoCajaChicaBean bean = new MovimientoCajaChicaBean();
 		bean.setCodigoDeOperacion("codigoDeOperacion");
@@ -46,7 +44,6 @@ public class MovimientoCajaChicaConverterTest {
 	
 	@SuppressWarnings("deprecation")
 	@Test
-	@Ignore
 	public void IngresosEgresosConverter_PojoToBean(){
 		T008_MovimientoCajaChica model = new T008_MovimientoCajaChica();
 		model.setCodigoDeOperacion("codigoDeOperacion");
@@ -61,7 +58,7 @@ public class MovimientoCajaChicaConverterTest {
 		model.setSaldoCapitalAnterior( new BigDecimal(10.29) );
 		
 		MovimientoCajaChicaBean bean = MovimientoCajaChicaConverter.parseConverter_FromPojoToBean(model);
-		
+
 		Assert.assertEquals("codigoDeOperacion", bean.getCodigoDeOperacion());
 		Assert.assertEquals(new Date("10/10/2016"), bean.getFechaDeMovimiento());
 		Assert.assertEquals("idCajaChica", bean.getIdCajaChica());
@@ -72,6 +69,7 @@ public class MovimientoCajaChicaConverterTest {
 		Assert.assertEquals("movimientoCorrelativo", bean.getMovimientoCorrelativo());
 		Assert.assertEquals( new BigDecimal(10.25) , bean.getSaldoCapitalActual());
 		Assert.assertEquals( new BigDecimal(10.29) , bean.getSaldoCapitalAnterior());
+
 	}
 	
 }

@@ -16,21 +16,22 @@ public class MovimientoCajaChicaConverter {
 		model.setMovimientoCorrelativo(bean.getMovimientoCorrelativo());
 		model.setSaldoCapitalActual(bean.getSaldoCapitalActual());
 		model.setSaldoCapitalAnterior(bean.getSaldoCapitalAnterior());
+		model.setIndicadorEliminacion(bean.getIndicadorEliminacion());
        return model;
 	}
 		
 	public static MovimientoCajaChicaBean parseConverter_FromPojoToBean(T008_MovimientoCajaChica model){
 		MovimientoCajaChicaBean bean = new MovimientoCajaChicaBean();
-		bean.setCodigoDeOperacion(bean.getCodigoDeOperacion());
-		bean.setFechaDeMovimiento(bean.getFechaDeMovimiento());
-		bean.setIdCajaChica(bean.getIdCajaChica());
-		bean.setIdMovimientoCajaChica(bean.getIdMovimientoCajaChica());
-		bean.setIdOperacion(bean.getIdOperacion());
-		bean.setIndicadorEliminacion(bean.getIndicadorEliminacion());
-		bean.setMontoDeMovimiento(bean.getMontoDeMovimiento());
-		bean.setMovimientoCorrelativo(bean.getMovimientoCorrelativo());
-		bean.setSaldoCapitalActual(bean.getSaldoCapitalActual());
-		bean.setSaldoCapitalAnterior(bean.getSaldoCapitalAnterior());
+		bean.setCodigoDeOperacion(model.getCodigoDeOperacion());
+		bean.setFechaDeMovimiento(model.getFechaDeMovimiento());
+		bean.setIdCajaChica(model.getIdCajaChica());
+		bean.setIdMovimientoCajaChica(model.getIdMovimientoCajaChica());
+		bean.setIdOperacion(model.getIdOperacion());
+		bean.setIndicadorEliminacion(model.getIndicadorEliminacion());
+		bean.setMontoDeMovimiento(model.getMontoDeMovimiento());
+		bean.setMovimientoCorrelativo(model.getMovimientoCorrelativo());
+		bean.setSaldoCapitalActual(model.getSaldoCapitalActual());
+		bean.setSaldoCapitalAnterior(model.getSaldoCapitalAnterior());
 	    return bean;
 	}
 	

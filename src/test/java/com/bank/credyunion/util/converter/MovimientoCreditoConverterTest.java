@@ -5,7 +5,6 @@ import java.util.Date;
 
 import junit.framework.Assert;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bank.credyunion.bean.MovimientoCreditoBean;
@@ -77,64 +76,45 @@ public class MovimientoCreditoConverterTest {
 	
 	@SuppressWarnings("deprecation")
 	@Test
-	@Ignore
 	public void MovimientoCreditoConverter_PojoToBean(){
-		BigDecimal capitalActual = new BigDecimal(12.03);
-		BigDecimal capitalAnterior = new BigDecimal(13.03);
-		BigDecimal montoDelCapital = new BigDecimal(14.03);
-		BigDecimal montoDelCargo = new BigDecimal(15.03);
-		BigDecimal montoDelInteres = new BigDecimal(16.03);
-		BigDecimal montoDeMora = new BigDecimal(17.03);
-		BigDecimal montoDeMovimiento = new BigDecimal(18.03);
-		String codigoAgencia = "codigoAgencia";
-		String codigoDeOperacion = "codigoDeOperacion";
-		String codigoUsuario = "codigoUsuario";
-		String idCredito = "idCredito";
-		String idOperation = "idOperation";
-		String indicadorEliminacion = "indicadorEliminacion";
-		Date fechaDeMovimiento = new Date("25/10/2016");
-		String numeroMovimiento = "numeroMovimiento";
-		String idMovimientoCredito = "idMovimientoCredito";
-		
 		T009_MovimientoCredito model = new T009_MovimientoCredito();
-		model.setCapitalActual(capitalActual);
-		model.setCapitalAnterior(capitalAnterior);
-		model.setCodigoAgencia(codigoAgencia);
-		model.setCodigoDeOperacion(codigoDeOperacion);
-		model.setCodigoUsuario(codigoUsuario);
-		model.setFechaDeMovimiento(fechaDeMovimiento);
-		model.setIdCredito(idCredito);
-		model.setIdMovimientoCredito(idMovimientoCredito);
-		model.setIdOperation(idOperation);
-		model.setIndicadorEliminacion(indicadorEliminacion);
-		model.setMontoDelCapital(montoDelCapital);
-		model.setMontoDelCargo(montoDelCargo);
-		model.setMontoDelInteres(montoDelInteres);
-		model.setMontoDeMora(montoDeMora);
-		model.setMontoDeMovimiento(montoDeMovimiento);
+		model.setIdMovimientoCredito("yyy");
+		model.setIdCredito("idCredito");
+		model.setIdOperation("idOperacion");
+		model.setCapitalActual(new BigDecimal(12.33));
+		model.setCapitalAnterior(new BigDecimal(15.43));
+		model.setMontoDeMovimiento(new BigDecimal(17.43));
+		model.setFechaDeMovimiento(new Date("10/12/2016"));
 		model.setMovimientoCorrelativo("movimientoCorrelativo");
-		model.setNumeroMovimiento(numeroMovimiento);
-		
+		model.setNumeroMovimiento("numeroMovimiento");
+		model.setCodigoDeOperacion("codigoDeOperacion");
+		model.setMontoDelCapital(new BigDecimal(27.43));
+		model.setMontoDelInteres(new BigDecimal(37.43));
+		model.setMontoDeMora(new BigDecimal(137.43));
+		model.setMontoDelCargo(new BigDecimal(237.43));
+		model.setCodigoUsuario("codigoUsuario");
+		model.setCodigoAgencia("codigoAgencia");
+		model.setIndicadorEliminacion("indicadorEliminacion");
+
 		MovimientoCreditoBean bean = MovimientoCreditoConverter.parseConverter_FromPojoToBean(model);
-		
-		Assert.assertEquals(capitalActual, bean.getCapitalActual());
-		Assert.assertEquals(capitalAnterior, bean.getCapitalAnterior());
-		Assert.assertEquals(codigoAgencia, bean.getCodigoAgencia());
-		Assert.assertEquals(codigoDeOperacion, bean.getCodigoDeOperacion());
-		Assert.assertEquals(codigoUsuario, bean.getCodigoUsuario());
-		Assert.assertEquals(fechaDeMovimiento, bean.getFechaDeMovimiento());
-		Assert.assertEquals(idCredito, bean.getIdCredito());
-		Assert.assertEquals(idMovimientoCredito, bean.getIdMovimientoCredito());
-		Assert.assertEquals(idOperation, bean.getIdOperation());
-		Assert.assertEquals(indicadorEliminacion, bean.getIndicadorEliminacion());
-		Assert.assertEquals(montoDelCapital, bean.getMontoDelCapital());
-		Assert.assertEquals(montoDelCargo, bean.getMontoDelCargo());
-		Assert.assertEquals(montoDelInteres, bean.getMontoDelInteres());
-		Assert.assertEquals(montoDeMora, bean.getMontoDeMora());
-		Assert.assertEquals(montoDeMovimiento, bean.getMontoDeMovimiento());
+		Assert.assertEquals("yyy", bean.getIdMovimientoCredito());
+		Assert.assertEquals("idCredito", bean.getIdCredito());
+		Assert.assertEquals("idOperacion", bean.getIdOperation());
+		Assert.assertEquals(new BigDecimal(12.33), bean.getCapitalActual());
+		Assert.assertEquals(new BigDecimal(15.43), bean.getCapitalAnterior());
+		Assert.assertEquals(new BigDecimal(17.43), bean.getMontoDeMovimiento());
+		Assert.assertEquals(new Date("10/12/2016"), bean.getFechaDeMovimiento());
 		Assert.assertEquals("movimientoCorrelativo", bean.getMovimientoCorrelativo());
-		Assert.assertEquals(numeroMovimiento, bean.getNumeroMovimiento());
-		
+		Assert.assertEquals("numeroMovimiento", bean.getNumeroMovimiento());
+		Assert.assertEquals("codigoDeOperacion", bean.getCodigoDeOperacion());
+		Assert.assertEquals(new BigDecimal(27.43), bean.getMontoDelCapital());
+		Assert.assertEquals(new BigDecimal(37.43), bean.getMontoDelInteres());
+		Assert.assertEquals(new BigDecimal(137.43), bean.getMontoDeMora());
+		Assert.assertEquals(new BigDecimal(237.43), bean.getMontoDelCargo());
+		Assert.assertEquals("codigoUsuario", bean.getCodigoUsuario());
+		Assert.assertEquals("codigoAgencia", bean.getCodigoAgencia());
+		Assert.assertEquals("indicadorEliminacion", bean.getIndicadorEliminacion());
+
 	}
 	
 }

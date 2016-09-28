@@ -36,7 +36,7 @@ public class MovimientoCreditoConverter {
 		bean.setCodigoUsuario(model.getCodigoUsuario());
 		bean.setFechaDeMovimiento(model.getFechaDeMovimiento());
 		bean.setIdCredito(model.getIdCredito());
-		bean.setIdMovimientoCredito(model.getMovimientoCorrelativo());
+		bean.setIdMovimientoCredito(model.getIdMovimientoCredito());
 		bean.setIdOperation(model.getIdOperation());
 		bean.setIndicadorEliminacion(model.getIndicadorEliminacion());
 		bean.setMontoDelCapital(model.getMontoDelCapital());

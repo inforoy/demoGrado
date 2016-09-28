@@ -22,6 +22,7 @@ public class MovimientoCreditoBean {
 	private String codigoUsuario;
 	private String codigoAgencia;
 	private String indicadorEliminacion;
+
 	public String getIdMovimientoCredito() {
 		return idMovimientoCredito;
 	}
