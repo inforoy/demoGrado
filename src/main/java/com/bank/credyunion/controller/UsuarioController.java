@@ -1,7 +1,6 @@
 package com.bank.credyunion.controller;
 
 import java.io.PrintWriter;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,7 +27,8 @@ public class UsuarioController {
 		String jsonData = request.getParameter("jsonData");
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
-		
+		System.out.println(jsonData);
+        
 		Gson gson = new Gson();
 		GeneralView generalView = new GeneralView();
 		generalView.setMensaje("success");

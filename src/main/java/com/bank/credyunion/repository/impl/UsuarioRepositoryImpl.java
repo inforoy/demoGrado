@@ -26,7 +26,7 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
 	public boolean registerUsuario(T020_Usuario usuario) {
 		String sqlInsert = SqlUtils_Usuario.getSQLRegisterUser();
 		int result = jdbcTemplate.update(sqlInsert, new Object[] {
-				usuario.getIdUsuario(),
+				Integer.parseInt( usuario.getIdUsuario() ),
 				usuario.getNombreUsuario(),
 				usuario.getContrasenia(),
 				usuario.getNombres(),
