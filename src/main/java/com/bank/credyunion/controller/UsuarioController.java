@@ -80,5 +80,15 @@ public class UsuarioController {
 		return "login";
 	}
 	
+	@RequestMapping(value="/registrarUsuario.htm", method = RequestMethod.GET)
+	public String registrarUsuario(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		try {
+			System.out.println("llego");
+		} catch (Exception e) {
+			System.out.println("Error"+e);
+		}
+		return "registrarUsuario";
+	}
+	
 
 }
