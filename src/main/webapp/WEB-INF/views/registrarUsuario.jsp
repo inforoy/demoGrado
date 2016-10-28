@@ -25,36 +25,36 @@
 		  <div class="form-group has-feedback">
 		    <label for="usuario" class="control-label col-xs-4">Nombre de Usuario</label>
 		    <div class="col-xs-8">
-		    	<input type="text" class="form-control" id="usuario" placeholder="Nombre de Usuario">
+		    	<input type="text" class="form-control" id="usuario" placeholder="Nombre de Usuario" minlength="5" usuario required>
 		    	<span class="help-block"></span>
 		    </div>
 		  </div>
 		  <div class="form-group has-feedback">
 		    <label for="password" class="control-label col-xs-4">Contrasenia</label>
 		    <div class="col-xs-8">
-		    	<input type="password" class="form-control" id="password" placeholder="Contrasenia">
-		    	<span class="help-block"></span>
+		    	<input type="password" class="form-control" id="password" placeholder="Contrasenia" minlength="3" required>
+		    	<span class="help-block with-errors"></span>
 		    </div>
 		  </div>
 		  <div class="form-group has-feedback">
 		    <label for="nombres" class="control-label col-xs-4">Nombres</label>
 		    <div class="col-xs-8">
-		    	<input type="text" class="form-control" id="nombres" placeholder="Nombres">
-		    	<span class="help-block"></span>
+		    	<input type="text" class="form-control" id="nombres" placeholder="Nombres" required>
+		    	<span class="help-block with-errors"></span>
 		    </div>
 		  </div>
 		  <div class="form-group has-feedback">
 		    <label for="paterno" class="control-label col-xs-4">Apellido Paterno</label>
 		    <div class="col-xs-8">
-		    	<input type="text" class="form-control" id="paterno" placeholder="Apellido Paterno">
-		    	<span class="help-block"></span>
+		    	<input type="text" class="form-control" id="paterno" placeholder="Apellido Paterno" required>
+		    	<span class="help-block with-errors"></span>
 		    </div>
 		  </div>
 		  <div class="form-group has-feedback">
 		    <label for="materno" class="control-label col-xs-4">Apellido Materno</label>
 		    <div class="col-xs-8">
-		    	<input type="text" class="form-control" id="materno" placeholder="Apellido Materno">
-		    	<span class="help-block"></span>
+		    	<input type="text" class="form-control" id="materno" placeholder="Apellido Materno" required>
+		    	<span class="help-block with-errors"></span>
 		    </div>
 		  </div>
 		  
