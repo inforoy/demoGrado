@@ -90,5 +90,55 @@ public class UsuarioController {
 		return "registrarUsuario";
 	}
 	
+	@RequestMapping(value="/registrarEmpresa.htm", method = RequestMethod.GET)
+	public String registrarEmpresa(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		try {
+			System.out.println("llego");
+		} catch (Exception e) {
+			System.out.println("Error"+e);
+		}
+		return "registrarEmpresa";
+	}
+	
+	@RequestMapping(value="/registrarAgencia.htm", method = RequestMethod.GET)
+	public String registrarAgencia(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		try {
+			System.out.println("llego");
+		} catch (Exception e) {
+			System.out.println("Error"+e);
+		}
+		return "registrarAgencia";
+	}
+	
+	@RequestMapping(value="/registrarSocio.htm", method = RequestMethod.GET)
+	public String registrarSocio(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		try {
+			System.out.println("llego");
+		} catch (Exception e) {
+			System.out.println("Error"+e);
+		}
+		return "registrarSocio";
+	}
+	
+	@RequestMapping(value="/registrarProductoCuenta.htm", method = RequestMethod.GET)
+	public String registrarProductoCuenta(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		try {
+			System.out.println("llego");
+		} catch (Exception e) {
+			System.out.println("Error"+e);
+		}
+		return "crearProductoCuenta";
+	}
+	
+	@RequestMapping(value="/buscarSocio.htm", method = RequestMethod.GET)
+	public String buscarSocio(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		try {
+			System.out.println("llego");
+		} catch (Exception e) {
+			System.out.println("Error"+e);
+		}
+		return "BuscarSocio";
+	}
+	
 
 }

@@ -1,0 +1,1 @@
+$('#fechaCreacion').datetimepicker();
